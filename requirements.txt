@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+biopython>=1.83
+numpy>=1.26
+numba>=0.59
+dask>=2024.5.0
+textual>=0.58.0
+pytest>=8.0
+httpx>=0.27
