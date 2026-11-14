@@ -12,3 +12,7 @@ _DEC = "ACGTN"
 def encode(seq: str) -> np.ndarray:
     """'ACGT' -> array([0,1,2,3])."""
     return _LUT[np.frombuffer(seq.encode("ascii"), dtype=np.uint8)]
+
+
+def decode(arr) -> str:
+    return "".join(_DEC[int(i)] for i in arr)
