@@ -16,3 +16,8 @@ def encode(seq: str) -> np.ndarray:
 
 def decode(arr) -> str:
     return "".join(_DEC[int(i)] for i in arr)
+
+
+def rc_encoded(arr: np.ndarray) -> np.ndarray:
+    """Reverse complement of an encoded array (A<->T, C<->G, N stays N)."""
+    return np.where(arr < 4, 3 - arr, 4).astype(np.uint8)[::-1].copy()
